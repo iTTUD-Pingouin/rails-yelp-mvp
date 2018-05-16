@@ -14,6 +14,10 @@ class RestaurantsController < ApplicationController
       redirect_to restaurant_path(@restaurant)
     else
       render :new
+      @restaurant.errors.full_messages.each do |message|
+        message
+      end
+
     end
   end
 

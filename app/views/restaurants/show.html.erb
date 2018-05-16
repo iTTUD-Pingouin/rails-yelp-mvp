@@ -8,6 +8,7 @@
 
 
   <h2>Reviews</h2>
+  <%= link_to 'Add a new review', new_restaurant_review_path(@restaurant) %>
   <ul class="list-unstyled">
     <% @restaurant.reviews.each do |review| %>
       <li>
