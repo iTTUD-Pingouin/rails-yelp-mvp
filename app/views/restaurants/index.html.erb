@@ -1,0 +1,16 @@
+<div class="container">
+
+  <h1>Restaurants</h1>
+  <ul class="list-unstyled">
+    <% @restaurants.each do |restaurant| %>
+      <li>
+        <p><strong><%= link_to restaurant.name, restaurant_path(restaurant) %></strong></p>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Add new restau', new_restaurant_path  %>
+</div>
+
+
+
